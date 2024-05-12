@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+  <div class="container-fluid bg-white">
+    <div class="row myheader">
+      <div class="myHeader">
+        <div class="myCart">My Cart</div>
+        <div class="myCartItems">
+          <ng-template ngFor let-line [ngForOf]="getLines()">
+            <h3> {{line.product.title}} </h3>
+            <h3> {{line.quantity  +"x $" +line.product.price }}</h3>
+            <h3>{{ line.size}}</h3>
+
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h2 class="errorMessage" *ngIf="errorMessage">{{errorMessage}}</h2>
+    </div>
+    <div class="row mydisplay">
+
+
+          <div class="col-sm-5 col-md-4">
+            <figure>
+              <img *ngIf="product.imageURL!= null" src="{{product.imageURL}}" />
+            </figure>
+
+          </div>
+          <div class="col-sm-7 col-md-8">
+           <div class="row"><h2>{{product.title}} <hr/> </h2></div>
+           <div class="row"><h3>${{product.price}} <hr/> </h3></div>
+           <div class="row"><h3>{{product.description}} </h3></div>
+           <div class="row"><h3>size* </h3></div>
+           <div class="row">
+            <ng-template ngFor let-option [ngForOf]="product.sizeOptions">
+              <button class="btn btn-outline-primary" (click)="selectSize(option.label)"   [class.active]="size == option.label">{{option.label}} </button>
+
+            </ng-template>
+           </div>
+           <br/>
+           <div class="row"><button class="btn btn-info" (click)="addToCart()" >Add to Cart</button></div>
+          </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+

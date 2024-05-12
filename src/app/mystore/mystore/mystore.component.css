@@ -1,0 +1,53 @@
+img {
+  margin-right: 15px;
+  max-width: 100%;
+  min-width: 100%;
+}
+figure {
+  padding: 1em;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: .1em .1em .5em .1em rgba(0,0,0, 0.3);
+}
+
+.mycontainer {
+  cursor: pointer;
+  padding: 1em;
+  margin-right: 2px;
+  border: 1px solid rgba(0,0,0, 0.3);
+}
+
+.errorMessage {
+  color: red;
+}
+
+.myCart {
+  float: right;
+  border: 1px solid rgba(0,0,0, 0.3);
+  cursor: pointer;
+}
+
+.myCartItems {
+  border: 1px solid rgba(0,0,0, 0.3);
+  float: right;
+  color: blue;
+  width: 200px;
+  z-index: 2;
+}
+
+.myheader{
+  z-index: 2;
+}
+
+.mydisplay{
+  z-index: 1;
+}
+
+.myHeader {
+  background-color: #F6F6F7;
+  width: 100%;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
